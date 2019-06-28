@@ -8,7 +8,7 @@
       let xhr = new XMLHttpRequest();
       xhr.onreadystatechange = function(){
         if(xhr.readyState === 4){
-          document.querySelector('#ajax').innerHTML = xhr.responseText;
+          document.getElementById('ajax').innerHTML = xhr.responseText;
         }
       };
       xhr.open("GET", "ajax.html");
