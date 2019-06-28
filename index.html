@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Practicing AJAX</title>
+
+    <script>
+      let xhr = new XMLHttpRequest();
+      xhr.onreadystatechange = function(){
+        if(xhr.readyState === 4){
+          document.querySelector('#ajax').innerHTML = xhr.responseText;
+        }
+      };
+      xhr.open("GET", "ajax.html");
+
+      funtion sendAJAX(){
+        xhr.send();
+      }
+
+    </script>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>Bring on the AJAX</h1>
+        <button id="load" onclick="sendAJAX()">click Me!</button>
+    </div>
+    <div id="ajax">
+
+    </div>
+</body>
+</html>
